@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    
+
     <style>
         * {
             margin: 0;
@@ -37,7 +38,7 @@
         /* HEADER */
         header {
             background: var(--white);
-            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
             position: sticky;
             top: 0;
             z-index: 100;
@@ -79,7 +80,8 @@
             transition: color 0.3s ease;
         }
 
-        .lang-switch a:hover, .lang-switch a.active {
+        .lang-switch a:hover,
+        .lang-switch a.active {
             color: var(--accent-teal);
             font-weight: 700;
         }
@@ -156,7 +158,7 @@
             color: var(--gray-600);
             font-size: 1rem;
             text-align: center;
-            box-shadow: 0 20px 50px rgba(0,0,0,0.08);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
             border: 2px dashed var(--gray-300);
         }
 
@@ -233,7 +235,7 @@
 
         .benefit-card:hover {
             transform: translateY(-8px);
-            box-shadow: 0 12px 30px rgba(0,0,0,0.1);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
             border-color: var(--accent-teal);
         }
 
@@ -282,7 +284,7 @@
             padding: 2.5rem 2rem;
             border-radius: 12px;
             position: relative;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
         }
 
         .step-number {
@@ -410,9 +412,10 @@
             .logo {
                 font-size: 1.4rem;
             }
-            
+
             .lang-switch {
-                display: none; /* Hide on very small screens or make it a dropdown, for now specific request was not detailed on mobile */
+                display: none;
+                /* Hide on very small screens or make it a dropdown, for now specific request was not detailed on mobile */
             }
 
             .btn {
@@ -448,6 +451,7 @@
         }
     </style>
 </head>
+
 <body>
     <!-- HEADER -->
     <header>
@@ -468,11 +472,18 @@
         <div class="hero-container">
             <div class="hero-content">
                 <h1>Merge 10 Bexio invoices in <span class="highlight">1 single click</span></h1>
-                <p>Stop wasting time on repetitive billing. BatchBill automatically consolidates your orders into a single, clear invoice.</p>
+                <p>Stop wasting time on repetitive billing. BatchBill automatically consolidates your orders into a
+                    single, clear invoice.</p>
                 <a href="#cta" class="btn btn-large">Start my free trial →</a>
             </div>
-            <div class="hero-image">
-                [HERO IMAGE: Interface screenshot showing selection of multiple Bexio orders and the "Merge into 1 invoice" button]
+            <div class="hero-image"
+                style="padding: 0; border: none; background: transparent; box-shadow: 0 20px 50px rgba(0,0,0,0.15);">
+                <video autoplay loop muted playsinline
+                    style="width: 100%; height: auto; border-radius: 16px; display: block;">
+                    <source src="video_hero.mov" type="video/quicktime">
+                    <source src="video_hero.mov" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
             </div>
         </div>
     </section>
@@ -486,13 +497,15 @@
     <section class="problem-solution">
         <div class="section-container">
             <h2 class="section-title">Your Friday shouldn't look like this</h2>
-            <p class="section-subtitle">Creating 10 separate invoices for the same customer who made 10 small orders? That's over.</p>
-            
+            <p class="section-subtitle">Creating 10 separate invoices for the same customer who made 10 small orders?
+                That's over.</p>
+
             <div class="benefits-grid">
                 <div class="benefit-card">
                     <div class="benefit-icon">⚡</div>
                     <h3>Save 4h per week</h3>
-                    <p>No more repetitive clicks. One selection, one merge, one invoice. Your time is too precious for that.</p>
+                    <p>No more repetitive clicks. One selection, one merge, one invoice. Your time is too precious for
+                        that.</p>
                 </div>
                 <div class="benefit-card">
                     <div class="benefit-icon">✓</div>
@@ -502,7 +515,8 @@
                 <div class="benefit-card">
                     <div class="benefit-icon">📄</div>
                     <h3>Happier clients</h3>
-                    <p>A single clear invoice instead of 10 emails. Your clients appreciate the simplicity, and so will you.</p>
+                    <p>A single clear invoice instead of 10 emails. Your clients appreciate the simplicity, and so will
+                        you.</p>
                 </div>
             </div>
         </div>
@@ -512,18 +526,21 @@
     <section class="how-it-works">
         <div class="section-container">
             <h2 class="section-title">So simple you'll adopt it in 5 minutes</h2>
-            <p class="section-subtitle">No technical skills required. If you use Bexio, you already know how to use BatchBill.</p>
-            
+            <p class="section-subtitle">No technical skills required. If you use Bexio, you already know how to use
+                BatchBill.</p>
+
             <div class="steps-container">
                 <div class="step">
                     <div class="step-number">1</div>
                     <h3>Connect Bexio</h3>
-                    <p>Authorize BatchBill in one click via your Bexio account. Secure connection, zero complicated configuration.</p>
+                    <p>Authorize BatchBill in one click via your Bexio account. Secure connection, zero complicated
+                        configuration.</p>
                 </div>
                 <div class="step">
                     <div class="step-number">2</div>
                     <h3>Select your orders</h3>
-                    <p>Check the orders from the same customer you want to group. The interface is as intuitive as Bexio.</p>
+                    <p>Check the orders from the same customer you want to group. The interface is as intuitive as
+                        Bexio.</p>
                 </div>
                 <div class="step">
                     <div class="step-number">3</div>
@@ -553,4 +570,5 @@
         </div>
     </footer>
 </body>
+
 </html>
