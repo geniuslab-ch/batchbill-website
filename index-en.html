@@ -1,14 +1,13 @@
 <!DOCTYPE html>
-<html lang="fr">
-
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BatchBill - Fusionnez vos factures Bexio en 1 clic</title>
+    <title>BatchBill - Merge your Bexio invoices in 1 click</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-
+    
     <style>
         * {
             margin: 0;
@@ -38,7 +37,7 @@
         /* HEADER */
         header {
             background: var(--white);
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
             position: sticky;
             top: 0;
             z-index: 100;
@@ -80,8 +79,7 @@
             transition: color 0.3s ease;
         }
 
-        .lang-switch a:hover,
-        .lang-switch a.active {
+        .lang-switch a:hover, .lang-switch a.active {
             color: var(--accent-teal);
             font-weight: 700;
         }
@@ -158,7 +156,7 @@
             color: var(--gray-600);
             font-size: 1rem;
             text-align: center;
-            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.08);
             border: 2px dashed var(--gray-300);
         }
 
@@ -235,7 +233,7 @@
 
         .benefit-card:hover {
             transform: translateY(-8px);
-            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.1);
             border-color: var(--accent-teal);
         }
 
@@ -284,7 +282,7 @@
             padding: 2.5rem 2rem;
             border-radius: 12px;
             position: relative;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
         }
 
         .step-number {
@@ -412,9 +410,9 @@
             .logo {
                 font-size: 1.4rem;
             }
-
+            
             .lang-switch {
-                display: none;
+                display: none; /* Hide on very small screens or make it a dropdown, for now specific request was not detailed on mobile */
             }
 
             .btn {
@@ -450,19 +448,18 @@
         }
     </style>
 </head>
-
 <body>
     <!-- HEADER -->
     <header>
         <div class="header-container">
-            <a href="#" class="logo">Batch<span>Bill</span></a>
+            <a href="index-en.html" class="logo">Batch<span>Bill</span></a>
             <div class="lang-switch">
-                <a href="index.html" class="active">FR</a>
-                <a href="index-en.html">EN</a>
+                <a href="index.html">FR</a>
+                <a href="index-en.html" class="active">EN</a>
                 <a href="index-de.html">DE</a>
                 <a href="index-it.html">IT</a>
             </div>
-            <a href="#cta" class="btn">Essai Gratuit</a>
+            <a href="#cta" class="btn">Free Trial</a>
         </div>
     </header>
 
@@ -470,48 +467,42 @@
     <section class="hero">
         <div class="hero-container">
             <div class="hero-content">
-                <h1>Fusionnez 10 factures Bexio en <span class="highlight">1 seul clic</span></h1>
-                <p>Arrêtez de perdre votre temps sur la facturation répétitive. BatchBill consolide automatiquement vos
-                    commandes en une facture unique et claire.</p>
-                <a href="#cta" class="btn btn-large">Commencer mon essai gratuit →</a>
+                <h1>Merge 10 Bexio invoices in <span class="highlight">1 single click</span></h1>
+                <p>Stop wasting time on repetitive billing. BatchBill automatically consolidates your orders into a single, clear invoice.</p>
+                <a href="#cta" class="btn btn-large">Start my free trial →</a>
             </div>
             <div class="hero-image">
-                [IMAGE HERO : Capture d'écran interface montrant la sélection de multiples commandes Bexio et le bouton
-                "Fusionner en 1 facture"]
+                [HERO IMAGE: Interface screenshot showing selection of multiple Bexio orders and the "Merge into 1 invoice" button]
             </div>
         </div>
     </section>
 
     <!-- TRUST BANNER -->
     <section class="trust-banner">
-        <p>Intégration transparente avec <span class="logo-placeholder">Bexio</span> • Approuvé par +500 PME suisses</p>
+        <p>Seamless integration with <span class="logo-placeholder">Bexio</span> • Trusted by +500 Swiss SMEs</p>
     </section>
 
     <!-- PROBLEM-SOLUTION -->
     <section class="problem-solution">
         <div class="section-container">
-            <h2 class="section-title">Votre vendredi ne devrait pas ressembler à ça</h2>
-            <p class="section-subtitle">Créer 10 factures distinctes pour le même client qui a fait 10 petites commandes
-                ? C'est fini.</p>
-
+            <h2 class="section-title">Your Friday shouldn't look like this</h2>
+            <p class="section-subtitle">Creating 10 separate invoices for the same customer who made 10 small orders? That's over.</p>
+            
             <div class="benefits-grid">
                 <div class="benefit-card">
                     <div class="benefit-icon">⚡</div>
-                    <h3>Gagnez 4h par semaine</h3>
-                    <p>Fini les clics répétitifs. Une sélection, une fusion, une facture. Votre temps est trop précieux
-                        pour ça.</p>
+                    <h3>Save 4h per week</h3>
+                    <p>No more repetitive clicks. One selection, one merge, one invoice. Your time is too precious for that.</p>
                 </div>
                 <div class="benefit-card">
                     <div class="benefit-icon">✓</div>
-                    <h3>Zéro erreur de saisie</h3>
-                    <p>L'automatisation élimine les oublis et les doubles saisies. Chaque ligne de commande est capturée
-                        avec précision.</p>
+                    <h3>Zero data entry errors</h3>
+                    <p>Automation eliminates oversights and double entries. Every order line is captured precisely.</p>
                 </div>
                 <div class="benefit-card">
                     <div class="benefit-icon">📄</div>
-                    <h3>Clients plus satisfaits</h3>
-                    <p>Une seule facture claire au lieu de 10 emails. Vos clients apprécient la simplicité et vous
-                        aussi.</p>
+                    <h3>Happier clients</h3>
+                    <p>A single clear invoice instead of 10 emails. Your clients appreciate the simplicity, and so will you.</p>
                 </div>
             </div>
         </div>
@@ -520,27 +511,24 @@
     <!-- HOW IT WORKS -->
     <section class="how-it-works">
         <div class="section-container">
-            <h2 class="section-title">Si simple que vous l'adopterez en 5 minutes</h2>
-            <p class="section-subtitle">Aucune compétence technique requise. Si vous utilisez Bexio, vous savez déjà
-                comment utiliser BatchBill.</p>
-
+            <h2 class="section-title">So simple you'll adopt it in 5 minutes</h2>
+            <p class="section-subtitle">No technical skills required. If you use Bexio, you already know how to use BatchBill.</p>
+            
             <div class="steps-container">
                 <div class="step">
                     <div class="step-number">1</div>
-                    <h3>Connectez Bexio</h3>
-                    <p>Autorisez BatchBill en un clic via votre compte Bexio. Connexion sécurisée, zéro configuration
-                        compliquée.</p>
+                    <h3>Connect Bexio</h3>
+                    <p>Authorize BatchBill in one click via your Bexio account. Secure connection, zero complicated configuration.</p>
                 </div>
                 <div class="step">
                     <div class="step-number">2</div>
-                    <h3>Sélectionnez vos commandes</h3>
-                    <p>Cochez les commandes du même client que vous voulez regrouper. L'interface est aussi intuitive
-                        que Bexio.</p>
+                    <h3>Select your orders</h3>
+                    <p>Check the orders from the same customer you want to group. The interface is as intuitive as Bexio.</p>
                 </div>
                 <div class="step">
                     <div class="step-number">3</div>
-                    <h3>Cliquez sur "Fusionner"</h3>
-                    <p>BatchBill crée automatiquement une facture consolidée dans votre Bexio. Prête à être envoyée.</p>
+                    <h3>Click on "Merge"</h3>
+                    <p>BatchBill automatically creates a consolidated invoice in your Bexio. Ready to be sent.</p>
                 </div>
             </div>
         </div>
@@ -548,22 +536,21 @@
 
     <!-- CTA FINAL -->
     <section class="cta-final" id="cta">
-        <h2>Arrêtez de perdre votre vendredi après-midi sur la facturation.</h2>
-        <a href="#signup" class="btn btn-large">Démarrer mon essai gratuit de 14 jours</a>
-        <p class="reassurance">✓ 14 jours gratuits · ✓ Pas de carte de crédit requise · ✓ Annulation en 1 clic</p>
+        <h2>Stop wasting your Friday afternoon on billing.</h2>
+        <a href="#signup" class="btn btn-large">Start my 14-day free trial</a>
+        <p class="reassurance">✓ 14 days free · ✓ No credit card required · ✓ Cancel in 1 click</p>
     </section>
 
     <!-- FOOTER -->
     <footer>
         <div class="footer-container">
             <div class="footer-links">
-                <a href="#mentions">Mentions légales</a>
-                <a href="#privacy">Confidentialité</a>
+                <a href="#mentions">Legal Notice</a>
+                <a href="#privacy">Privacy</a>
                 <a href="#contact">Contact</a>
             </div>
-            <p class="footer-copyright">© 2024 BatchBill. Tous droits réservés.</p>
+            <p class="footer-copyright">© 2024 BatchBill. All rights reserved.</p>
         </div>
     </footer>
 </body>
-
 </html>

@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="it">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BatchBill - Fusionnez vos factures Bexio en 1 clic</title>
+    <title>BatchBill - Unisci le tue fatture Bexio in 1 clic</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -415,6 +415,7 @@
 
             .lang-switch {
                 display: none;
+                /* Hide on very small screens or make it a dropdown, for now specific request was not detailed on mobile */
             }
 
             .btn {
@@ -455,14 +456,14 @@
     <!-- HEADER -->
     <header>
         <div class="header-container">
-            <a href="#" class="logo">Batch<span>Bill</span></a>
+            <a href="index-it.html" class="logo">Batch<span>Bill</span></a>
             <div class="lang-switch">
-                <a href="index.html" class="active">FR</a>
+                <a href="index.html">FR</a>
                 <a href="index-en.html">EN</a>
                 <a href="index-de.html">DE</a>
-                <a href="index-it.html">IT</a>
+                <a href="index-it.html" class="active">IT</a>
             </div>
-            <a href="#cta" class="btn">Essai Gratuit</a>
+            <a href="#cta" class="btn">Prova gratuita</a>
         </div>
     </header>
 
@@ -470,48 +471,48 @@
     <section class="hero">
         <div class="hero-container">
             <div class="hero-content">
-                <h1>Fusionnez 10 factures Bexio en <span class="highlight">1 seul clic</span></h1>
-                <p>Arrêtez de perdre votre temps sur la facturation répétitive. BatchBill consolide automatiquement vos
-                    commandes en une facture unique et claire.</p>
-                <a href="#cta" class="btn btn-large">Commencer mon essai gratuit →</a>
+                <h1>Unisci 10 fatture Bexio in <span class="highlight">1 solo clic</span></h1>
+                <p>Smetti di perdere tempo con la fatturazione ripetitiva. BatchBill consolida automaticamente i tuoi
+                    ordini in un'unica fattura chiara.</p>
+                <a href="#cta" class="btn btn-large">Inizia la prova gratuita →</a>
             </div>
             <div class="hero-image">
-                [IMAGE HERO : Capture d'écran interface montrant la sélection de multiples commandes Bexio et le bouton
-                "Fusionner en 1 facture"]
+                [IMMAGINE HERO: Screenshot dell'interfaccia che mostra la selezione di multipli ordini Bexio e il
+                pulsante "Unisci in 1 fattura"]
             </div>
         </div>
     </section>
 
     <!-- TRUST BANNER -->
     <section class="trust-banner">
-        <p>Intégration transparente avec <span class="logo-placeholder">Bexio</span> • Approuvé par +500 PME suisses</p>
+        <p>Integrazione perfetta con <span class="logo-placeholder">Bexio</span> • Scelto da +500 PMI svizzere</p>
     </section>
 
     <!-- PROBLEM-SOLUTION -->
     <section class="problem-solution">
         <div class="section-container">
-            <h2 class="section-title">Votre vendredi ne devrait pas ressembler à ça</h2>
-            <p class="section-subtitle">Créer 10 factures distinctes pour le même client qui a fait 10 petites commandes
-                ? C'est fini.</p>
+            <h2 class="section-title">Il tuo venerdì non dovrebbe essere così</h2>
+            <p class="section-subtitle">Creare 10 fatture separate per lo stesso cliente che ha fatto 10 piccoli ordini?
+                È finita.</p>
 
             <div class="benefits-grid">
                 <div class="benefit-card">
                     <div class="benefit-icon">⚡</div>
-                    <h3>Gagnez 4h par semaine</h3>
-                    <p>Fini les clics répétitifs. Une sélection, une fusion, une facture. Votre temps est trop précieux
-                        pour ça.</p>
+                    <h3>Risparmia 4h a settimana</h3>
+                    <p>Basta clic ripetitivi. Una selezione, un'unione, una fattura. Il tuo tempo è troppo prezioso per
+                        questo.</p>
                 </div>
                 <div class="benefit-card">
                     <div class="benefit-icon">✓</div>
-                    <h3>Zéro erreur de saisie</h3>
-                    <p>L'automatisation élimine les oublis et les doubles saisies. Chaque ligne de commande est capturée
-                        avec précision.</p>
+                    <h3>Zero errori di inserimento</h3>
+                    <p>L'automazione elimina sviste e doppi inserimenti. Ogni riga d'ordine viene catturata con
+                        precisione.</p>
                 </div>
                 <div class="benefit-card">
                     <div class="benefit-icon">📄</div>
-                    <h3>Clients plus satisfaits</h3>
-                    <p>Une seule facture claire au lieu de 10 emails. Vos clients apprécient la simplicité et vous
-                        aussi.</p>
+                    <h3>Clienti più soddisfatti</h3>
+                    <p>Un'unica fattura chiara invece di 10 email. I tuoi clienti apprezzano la semplicità, e anche tu.
+                    </p>
                 </div>
             </div>
         </div>
@@ -520,27 +521,28 @@
     <!-- HOW IT WORKS -->
     <section class="how-it-works">
         <div class="section-container">
-            <h2 class="section-title">Si simple que vous l'adopterez en 5 minutes</h2>
-            <p class="section-subtitle">Aucune compétence technique requise. Si vous utilisez Bexio, vous savez déjà
-                comment utiliser BatchBill.</p>
+            <h2 class="section-title">Così semplice che lo adotterai in 5 minuti</h2>
+            <p class="section-subtitle">Nessuna competenza tecnica richiesta. Se usi Bexio, sai già come usare
+                BatchBill.</p>
 
             <div class="steps-container">
                 <div class="step">
                     <div class="step-number">1</div>
-                    <h3>Connectez Bexio</h3>
-                    <p>Autorisez BatchBill en un clic via votre compte Bexio. Connexion sécurisée, zéro configuration
-                        compliquée.</p>
+                    <h3>Collega Bexio</h3>
+                    <p>Autorizza BatchBill con un clic tramite il tuo account Bexio. Connessione sicura, zero
+                        configurazione complicata.</p>
                 </div>
                 <div class="step">
                     <div class="step-number">2</div>
-                    <h3>Sélectionnez vos commandes</h3>
-                    <p>Cochez les commandes du même client que vous voulez regrouper. L'interface est aussi intuitive
-                        que Bexio.</p>
+                    <h3>Seleziona i tuoi ordini</h3>
+                    <p>Spunta gli ordini dello stesso cliente che vuoi raggruppare. L'interfaccia è intuitiva come
+                        Bexio.</p>
                 </div>
                 <div class="step">
                     <div class="step-number">3</div>
-                    <h3>Cliquez sur "Fusionner"</h3>
-                    <p>BatchBill crée automatiquement une facture consolidée dans votre Bexio. Prête à être envoyée.</p>
+                    <h3>Clicca su "Unisci"</h3>
+                    <p>BatchBill crea automaticamente una fattura consolidata nel tuo Bexio. Pronta per essere inviata.
+                    </p>
                 </div>
             </div>
         </div>
@@ -548,9 +550,9 @@
 
     <!-- CTA FINAL -->
     <section class="cta-final" id="cta">
-        <h2>Arrêtez de perdre votre vendredi après-midi sur la facturation.</h2>
-        <a href="#signup" class="btn btn-large">Démarrer mon essai gratuit de 14 jours</a>
-        <p class="reassurance">✓ 14 jours gratuits · ✓ Pas de carte de crédit requise · ✓ Annulation en 1 clic</p>
+        <h2>Smetti di perdere il tuo venerdì pomeriggio con la fatturazione.</h2>
+        <a href="#signup" class="btn btn-large">Inizia la mia prova gratuita di 14 giorni</a>
+        <p class="reassurance">✓ 14 giorni gratis · ✓ Nessuna carta di credito richiesta · ✓ Cancellazione in 1 clic</p>
     </section>
 
     <!-- FOOTER -->
@@ -558,10 +560,10 @@
         <div class="footer-container">
             <div class="footer-links">
                 <a href="#mentions">Mentions légales</a>
-                <a href="#privacy">Confidentialité</a>
-                <a href="#contact">Contact</a>
+                <a href="#privacy">Privacy</a>
+                <a href="#contact">Contatti</a>
             </div>
-            <p class="footer-copyright">© 2024 BatchBill. Tous droits réservés.</p>
+            <p class="footer-copyright">© 2024 BatchBill. Tutti i diritti riservati.</p>
         </div>
     </footer>
 </body>
