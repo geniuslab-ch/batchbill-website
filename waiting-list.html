@@ -275,18 +275,77 @@
             });
         </script>
 
-        <form class="waitlist-form" id="form"
-            onsubmit="event.preventDefault(); alert('Merci ! Vous êtes inscrit sur la liste d\'attente.');">
-            <input type="text" placeholder="Prénom" required
+        <form class="waitlist-form" id="waitlist-form">
+            <input type="text" id="first-name" placeholder="Prénom" required
                 style="padding: 1rem; border: 2px solid var(--gray-300); border-radius: 8px; font-size: 1rem; outline: none; transition: border-color 0.3s;">
-            <input type="text" placeholder="Nom" required
+            <input type="text" id="last-name" placeholder="Nom" required
                 style="padding: 1rem; border: 2px solid var(--gray-300); border-radius: 8px; font-size: 1rem; outline: none; transition: border-color 0.3s;">
-            <input type="text" placeholder="Entreprise (facultative)"
+            <input type="text" id="company" placeholder="Entreprise (facultative)"
                 style="padding: 1rem; border: 2px solid var(--gray-300); border-radius: 8px; font-size: 1rem; outline: none; transition: border-color 0.3s;">
-            <input type="email" placeholder="Votre adresse email professionnelle" required>
-            <button type="submit" class="btn">Rejoindre la liste d'attente</button>
+            <input type="email" id="email" placeholder="Votre adresse email professionnelle" required>
+            <button type="submit" id="submit-btn" class="btn">Rejoindre la liste d'attente</button>
         </form>
     </section>
+
+    <!-- SUPABASE INTEGRATION -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script>
+        // Initialize Supabase
+        const supabaseUrl = 'https://akycjuuojfaobgficfhd.supabase.co';
+        const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImFreWNqdXVvamZhb2JnZmljZmhkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Njk1MTQ5NDEsImV4cCI6MjA4NTA5MDk0MX0.mNWaUK2-BUi7pD7YMXuMSTkZzW8nTBqqzu44tkFEXwU';
+        const supabase = supabase.createClient(supabaseUrl, supabaseKey);
+
+        // Handle form submission
+        const form = document.getElementById('waitlist-form');
+        const submitBtn = document.getElementById('submit-btn');
+
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            // Disable button and show loading state
+            const originalBtnText = submitBtn.innerText;
+            submitBtn.disabled = true;
+            submitBtn.innerText = "Envoi en cours...";
+
+            // Get form values
+            const firstName = document.getElementById('first-name').value;
+            const lastName = document.getElementById('last-name').value;
+            const company = document.getElementById('company').value;
+            const email = document.getElementById('email').value;
+
+            try {
+                // Insert data into Supabase
+                const { data, error } = await supabase
+                    .from('waiting_list')
+                    .insert([
+                        {
+                            first_name: firstName,
+                            last_name: lastName,
+                            company: company || null,
+                            email: email
+                        }
+                    ]);
+
+                if (error) throw error;
+
+                // Success feedback
+                alert('Merci ! Vous êtes bien inscrit sur la liste d\'attente. 🚀');
+                form.reset();
+
+            } catch (error) {
+                console.error('Error adding to waiting list:', error);
+                if (error.code === '23505') { // Unique violation for email
+                    alert('Cette adresse email est déjà inscrite !');
+                } else {
+                    alert('Une erreur est survenue. Veuillez réessayer.');
+                }
+            } finally {
+                // Reset button
+                submitBtn.disabled = false;
+                submitBtn.innerText = originalBtnText;
+            }
+        });
+    </script>
 
 
 
