@@ -63,7 +63,7 @@
         }
 
         .logo img {
-            height: 80px;
+            height: 120px;
             width: auto;
         }
 
@@ -257,17 +257,7 @@
         <p>Soyez les premiers à simplifier votre facturation Bexio. Inscrivez-vous pour obtenir un accès prioritaire dès
             le lancement.</p>
 
-        <form class="waitlist-form" id="form"
-            onsubmit="event.preventDefault(); alert('Merci ! Vous êtes inscrit sur la liste d\'attente.');">
-            <input type="email" placeholder="Votre adresse email professionnelle" required>
-            <button type="submit" class="btn">Rejoindre la liste d'attente</button>
-        </form>
-    </section>
-
-    <!-- LARGE VIDEO SECTION -->
-    <section class="video-section">
-        <h2 style="font-size: 2rem; margin-bottom: 2rem; color: var(--primary-dark);">Découvrez BatchBill en action</h2>
-        <div class="video-container">
+        <div class="video-container" style="margin-bottom: 3rem;">
             <video id="large-video" autoplay loop muted playsinline preload="auto" controls>
                 <source src="video_hero.mov" type="video/quicktime">
                 <source src="video_hero.mov" type="video/mp4">
@@ -284,7 +274,21 @@
                 }
             });
         </script>
+
+        <form class="waitlist-form" id="form"
+            onsubmit="event.preventDefault(); alert('Merci ! Vous êtes inscrit sur la liste d\'attente.');">
+            <input type="text" placeholder="Prénom" required
+                style="padding: 1rem; border: 2px solid var(--gray-300); border-radius: 8px; font-size: 1rem; outline: none; transition: border-color 0.3s;">
+            <input type="text" placeholder="Nom" required
+                style="padding: 1rem; border: 2px solid var(--gray-300); border-radius: 8px; font-size: 1rem; outline: none; transition: border-color 0.3s;">
+            <input type="text" placeholder="Entreprise (facultative)"
+                style="padding: 1rem; border: 2px solid var(--gray-300); border-radius: 8px; font-size: 1rem; outline: none; transition: border-color 0.3s;">
+            <input type="email" placeholder="Votre adresse email professionnelle" required>
+            <button type="submit" class="btn">Rejoindre la liste d'attente</button>
+        </form>
     </section>
+
+
 
     <!-- FOOTER -->
     <footer>
