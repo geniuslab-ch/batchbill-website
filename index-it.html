@@ -54,11 +54,14 @@
         }
 
         .logo {
-            font-size: 1.75rem;
-            font-weight: 700;
-            color: var(--primary-dark);
+            display: flex;
+            align-items: center;
             text-decoration: none;
-            letter-spacing: -0.02em;
+        }
+
+        .logo img {
+            height: 40px;
+            width: auto;
         }
 
         .logo span {
@@ -456,14 +459,16 @@
     <!-- HEADER -->
     <header>
         <div class="header-container">
-            <a href="index-it.html" class="logo">Batch<span>Bill</span></a>
+            <a href="index-it.html" class="logo">
+                <img src="Logo_Batchbill.png" alt="BatchBill Logo">
+            </a>
             <div class="lang-switch">
                 <a href="index.html">FR</a>
                 <a href="index-en.html">EN</a>
                 <a href="index-de.html">DE</a>
                 <a href="index-it.html" class="active">IT</a>
             </div>
-            <a href="#cta" class="btn">Lista d'attesa</a>
+            <a href="waiting-list.html" class="btn">Lista d'attesa</a>
         </div>
     </header>
 
@@ -474,7 +479,7 @@
                 <h1>Unisci 10 fatture Bexio in <span class="highlight">1 solo clic</span></h1>
                 <p>Smetti di perdere tempo con la fatturazione ripetitiva. BatchBill consolida automaticamente i tuoi
                     ordini in un'unica fattura chiara.</p>
-                <a href="#cta" class="btn btn-large">Iscriviti alla lista d'attesa →</a>
+                <a href="waiting-list.html" class="btn btn-large">Iscriviti alla lista d'attesa →</a>
             </div>
             <div class="hero-image"
                 style="padding: 0; border: none; background: transparent; box-shadow: 0 20px 50px rgba(0,0,0,0.15);">
@@ -566,7 +571,7 @@
     <!-- CTA FINAL -->
     <section class="cta-final" id="cta">
         <h2>Smetti di perdere il tuo venerdì pomeriggio con la fatturazione.</h2>
-        <a href="#signup" class="btn btn-large">Iscriviti alla lista d'attesa</a>
+        <a href="waiting-list.html" class="btn btn-large">Iscriviti alla lista d'attesa</a>
         <p class="reassurance">✓ Accesso prioritario · ✓ Posti limitati · ✓ Prossimamente</p>
     </section>
 

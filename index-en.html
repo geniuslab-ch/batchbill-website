@@ -54,11 +54,14 @@
         }
 
         .logo {
-            font-size: 1.75rem;
-            font-weight: 700;
-            color: var(--primary-dark);
+            display: flex;
+            align-items: center;
             text-decoration: none;
-            letter-spacing: -0.02em;
+        }
+
+        .logo img {
+            height: 40px;
+            width: auto;
         }
 
         .logo span {
@@ -456,14 +459,16 @@
     <!-- HEADER -->
     <header>
         <div class="header-container">
-            <a href="index-en.html" class="logo">Batch<span>Bill</span></a>
+            <a href="index-en.html" class="logo">
+                <img src="Logo_Batchbill.png" alt="BatchBill Logo">
+            </a>
             <div class="lang-switch">
                 <a href="index.html">FR</a>
                 <a href="index-en.html" class="active">EN</a>
                 <a href="index-de.html">DE</a>
                 <a href="index-it.html">IT</a>
             </div>
-            <a href="#cta" class="btn">Join Waitlist</a>
+            <a href="waiting-list.html" class="btn">Join Waitlist</a>
         </div>
     </header>
 
@@ -474,7 +479,7 @@
                 <h1>Merge 10 Bexio invoices in <span class="highlight">1 single click</span></h1>
                 <p>Stop wasting time on repetitive billing. BatchBill automatically consolidates your orders into a
                     single, clear invoice.</p>
-                <a href="#cta" class="btn btn-large">Join the Waitlist →</a>
+                <a href="waiting-list.html" class="btn btn-large">Join the Waitlist →</a>
             </div>
             <div class="hero-image"
                 style="padding: 0; border: none; background: transparent; box-shadow: 0 20px 50px rgba(0,0,0,0.15);">
@@ -564,7 +569,7 @@
     <!-- CTA FINAL -->
     <section class="cta-final" id="cta">
         <h2>Stop wasting your Friday afternoon on billing.</h2>
-        <a href="#signup" class="btn btn-large">Join the Waitlist</a>
+        <a href="waiting-list.html" class="btn btn-large">Join the Waitlist</a>
         <p class="reassurance">✓ Priority Access · ✓ Limited Spots · ✓ Launching Soon</p>
     </section>
 

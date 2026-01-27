@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BatchBill - Rejoignez la liste d'attente</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-dark: #0F172A;
+            --accent-teal: #14B8A6;
+            --accent-teal-hover: #0D9488;
+            --white: #FFFFFF;
+            --light-bg: #F8FAFC;
+            --gray-100: #F1F5F9;
+            --gray-300: #CBD5E1;
+            --gray-600: #475569;
+            --gray-800: #1E293B;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            color: var(--primary-dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* HEADER */
+        header {
+            background: var(--white);
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1.25rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
+
+        .logo img {
+            height: 40px;
+            width: auto;
+        }
+
+        .lang-switch {
+            display: flex;
+            gap: 1rem;
+            font-size: 0.9rem;
+            font-weight: 500;
+            margin-right: 2rem;
+            margin-left: auto;
+        }
+
+        .lang-switch a {
+            text-decoration: none;
+            color: var(--gray-600);
+            transition: color 0.3s ease;
+        }
+
+        .lang-switch a:hover,
+        .lang-switch a.active {
+            color: var(--accent-teal);
+            font-weight: 700;
+        }
+
+        .btn {
+            background: var(--accent-teal);
+            color: var(--white);
+            padding: 0.75rem 1.75rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .btn:hover {
+            background: var(--accent-teal-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 16px rgba(20, 184, 166, 0.3);
+        }
+
+        /* HERO - WAITING LIST */
+        .hero-waitlist {
+            padding: 5rem 2rem;
+            text-align: center;
+            background: linear-gradient(135deg, var(--light-bg) 0%, var(--white) 100%);
+            flex: 1;
+        }
+
+        .hero-waitlist h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--primary-dark);
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-waitlist p {
+            font-size: 1.25rem;
+            color: var(--gray-600);
+            max-width: 600px;
+            margin: 0 auto 3rem;
+        }
+
+        .waitlist-form {
+            max-width: 500px;
+            margin: 0 auto;
+            display: flex;
+            gap: 1rem;
+            flex-direction: column;
+        }
+
+        .waitlist-form input[type="email"] {
+            padding: 1rem;
+            border: 2px solid var(--gray-300);
+            border-radius: 8px;
+            font-size: 1rem;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+
+        .waitlist-form input[type="email"]:focus {
+            border-color: var(--accent-teal);
+        }
+
+        .waitlist-form button {
+            padding: 1rem;
+            font-size: 1.1rem;
+        }
+
+        /* LARGE VIDEO SECTION */
+        .video-section {
+            padding: 4rem 2rem 6rem;
+            background: var(--white);
+            text-align: center;
+        }
+
+        .video-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+            background: #000;
+        }
+
+        .video-container video {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* FOOTER */
+        footer {
+            background: var(--primary-dark);
+            color: var(--gray-300);
+            padding: 2.5rem 2rem;
+            text-align: center;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-links a {
+            color: var(--gray-300);
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--accent-teal);
+        }
+
+        .footer-copyright {
+            font-size: 0.9rem;
+            opacity: 0.7;
+        }
+
+        @media (max-width: 640px) {
+            .hero-waitlist h1 {
+                font-size: 2rem;
+            }
+
+            .header-container {
+                padding: 1rem 1.5rem;
+            }
+
+            .logo img {
+                height: 32px;
+            }
+
+            .lang-switch {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header>
+        <div class="header-container">
+            <a href="index.html" class="logo">
+                <img src="Logo_Batchbill.png" alt="BatchBill Logo">
+            </a>
+            <div class="lang-switch">
+                <a href="index.html">FR</a>
+                <a href="index-en.html">EN</a>
+                <a href="index-de.html">DE</a>
+                <a href="index-it.html">IT</a>
+            </div>
+            <a href="#form" class="btn">S'inscrire</a>
+        </div>
+    </header>
+
+    <!-- HERO WAITLIST -->
+    <section class="hero-waitlist">
+        <h1>BatchBill arrive bientôt 🚀</h1>
+        <p>Soyez les premiers à simplifier votre facturation Bexio. Inscrivez-vous pour obtenir un accès prioritaire dès
+            le lancement.</p>
+
+        <form class="waitlist-form" id="form"
+            onsubmit="event.preventDefault(); alert('Merci ! Vous êtes inscrit sur la liste d\'attente.');">
+            <input type="email" placeholder="Votre adresse email professionnelle" required>
+            <button type="submit" class="btn">Rejoindre la liste d'attente</button>
+        </form>
+    </section>
+
+    <!-- LARGE VIDEO SECTION -->
+    <section class="video-section">
+        <h2 style="font-size: 2rem; margin-bottom: 2rem; color: var(--primary-dark);">Découvrez BatchBill en action</h2>
+        <div class="video-container">
+            <video id="large-video" autoplay loop muted playsinline preload="auto" controls>
+                <source src="video_hero.mov" type="video/quicktime">
+                <source src="video_hero.mov" type="video/mp4">
+                Votre navigateur ne supporte pas la lecture de vidéos.
+            </video>
+        </div>
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                var video = document.getElementById('large-video');
+                if (video) {
+                    video.play().catch(function (error) {
+                        console.log("Autoplay failed:", error);
+                    });
+                }
+            });
+        </script>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-links">
+                <a href="index.html">Accueil</a>
+                <a href="#">Mentions légales</a>
+                <a href="#">Confidentialité</a>
+                <a href="#">Contact</a>
+            </div>
+            <p class="footer-copyright">© 2024 BatchBill. Tous droits réservés.</p>
+        </div>
+    </footer>
+</body>
+
+</html>
