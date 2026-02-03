@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="it">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BatchBill - Rejoignez la liste d'attente</title>
+    <title>BatchBill - Iscriviti alla lista d'attesa</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -238,30 +238,30 @@
     <!-- HEADER -->
     <header>
         <div class="header-container">
-            <a href="index.html" class="logo">
+            <a href="index-it.html" class="logo">
                 <img src="Logo_Batchbill.png" alt="BatchBill Logo">
             </a>
             <div class="lang-switch">
-                <a href="waiting-list.html" class="active">FR</a>
+                <a href="waiting-list.html">FR</a>
                 <a href="waiting-list-en.html">EN</a>
                 <a href="waiting-list-de.html">DE</a>
-                <a href="waiting-list-it.html">IT</a>
+                <a href="waiting-list-it.html" class="active">IT</a>
             </div>
-            <a href="#form" class="btn">S'inscrire</a>
+            <a href="#form" class="btn">Iscriviti</a>
         </div>
     </header>
 
     <!-- HERO WAITLIST -->
     <section class="hero-waitlist">
-        <h1>BatchBill arrive bientôt 🚀</h1>
-        <p>Soyez les premiers à simplifier votre facturation Bexio. Inscrivez-vous pour obtenir un accès prioritaire dès
-            le lancement.</p>
+        <h1>BatchBill arriva presto 🚀</h1>
+        <p>Sii tra i primi a semplificare la tua fatturazione Bexio. Iscriviti per ottenere accesso prioritario al
+            lancio.</p>
 
         <div class="video-container" style="margin-bottom: 3rem;">
             <video id="large-video" autoplay loop muted playsinline preload="auto" controls>
                 <source src="video_hero.mov" type="video/quicktime">
                 <source src="video_hero.mov" type="video/mp4">
-                Votre navigateur ne supporte pas la lecture de vidéos.
+                Il tuo browser non supporta il tag video.
             </video>
         </div>
         <script>
@@ -276,14 +276,14 @@
         </script>
 
         <form class="waitlist-form" id="waitlist-form">
-            <input type="text" id="first-name" placeholder="Prénom" required
+            <input type="text" id="first-name" placeholder="Nome" required
                 style="padding: 1rem; border: 2px solid var(--gray-300); border-radius: 8px; font-size: 1rem; outline: none; transition: border-color 0.3s;">
-            <input type="text" id="last-name" placeholder="Nom" required
+            <input type="text" id="last-name" placeholder="Cognome" required
                 style="padding: 1rem; border: 2px solid var(--gray-300); border-radius: 8px; font-size: 1rem; outline: none; transition: border-color 0.3s;">
-            <input type="text" id="company" placeholder="Entreprise (facultative)"
+            <input type="text" id="company" placeholder="Azienda (opzionale)"
                 style="padding: 1rem; border: 2px solid var(--gray-300); border-radius: 8px; font-size: 1rem; outline: none; transition: border-color 0.3s;">
-            <input type="email" id="email" placeholder="Votre adresse email professionnelle" required>
-            <button type="submit" id="submit-btn" class="btn">Rejoindre la liste d'attente</button>
+            <input type="email" id="email" placeholder="Il tuo indirizzo email professionale" required>
+            <button type="submit" id="submit-btn" class="btn">Iscriviti alla lista d'attesa</button>
         </form>
     </section>
 
@@ -305,7 +305,7 @@
             // Disable button and show loading state
             const originalBtnText = submitBtn.innerText;
             submitBtn.disabled = true;
-            submitBtn.innerText = "Envoi en cours...";
+            submitBtn.innerText = "Invio in corso...";
 
             // Get form values
             const firstName = document.getElementById('first-name').value;
@@ -329,15 +329,15 @@
                 if (error) throw error;
 
                 // Success feedback
-                alert('Merci ! Vous êtes bien inscrit sur la liste d\'attente. 🚀');
+                alert('Grazie! Sei stato aggiunto alla lista d\'attesa. 🚀');
                 form.reset();
 
             } catch (error) {
                 console.error('Error adding to waiting list:', error);
                 if (error.code === '23505') { // Unique violation for email
-                    alert('Cette adresse email est déjà inscrite !');
+                    alert('Questo indirizzo email è già registrato!');
                 } else {
-                    alert('Une erreur est survenue. Veuillez réessayer.');
+                    alert('Si è verificato un errore. Riprova.');
                 }
             } finally {
                 // Reset button
@@ -353,12 +353,12 @@
     <footer>
         <div class="footer-container">
             <div class="footer-links">
-                <a href="index.html">Accueil</a>
-                <a href="mentions-legales.html">Mentions légales</a>
-                <a href="confidentialite.html">Confidentialité</a>
-                <a href="contact.html">Contact</a>
+                <a href="index-it.html">Home</a>
+                <a href="mentions-legales.html">Note legali</a>
+                <a href="confidentialite.html">Privacy</a>
+                <a href="contact.html">Contatti</a>
             </div>
-            <p class="footer-copyright">© 2024 BatchBill. Tous droits réservés.</p>
+            <p class="footer-copyright">© 2024 BatchBill. Tutti i diritti riservati.</p>
         </div>
     </footer>
 </body>
