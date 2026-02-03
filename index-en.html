@@ -381,6 +381,71 @@
             opacity: 0.7;
         }
 
+        /* SPLITBILL SECTION */
+        .splitbill-section {
+            padding: 6rem 2rem;
+            background: var(--white);
+            border-top: 1px solid var(--gray-300);
+        }
+
+        .splitbill-container {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .splitbill-logo {
+            height: 80px;
+            margin-bottom: 2rem;
+        }
+
+        .splitbill-container h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary-dark);
+            margin-bottom: 2rem;
+        }
+
+        .splitbill-features {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            margin: 2rem 0;
+            text-align: left;
+        }
+
+        .splitbill-feature {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            padding: 1.5rem;
+            background: var(--light-bg);
+            border-radius: 8px;
+            border-left: 4px solid var(--accent-teal);
+        }
+
+        .splitbill-feature strong {
+            color: var(--primary-dark);
+            font-weight: 600;
+            min-width: 120px;
+        }
+
+        .splitbill-feature span {
+            color: var(--gray-600);
+            line-height: 1.6;
+        }
+
+        .splitbill-conclusion {
+            font-size: 1.15rem;
+            color: var(--gray-600);
+            line-height: 1.7;
+            margin-top: 2rem;
+            padding: 2rem;
+            background: var(--light-bg);
+            border-radius: 12px;
+            font-style: italic;
+        }
+
         /* RESPONSIVE */
         @media (max-width: 968px) {
             .hero-container {
@@ -562,6 +627,30 @@
                     <h3>Click on "Merge"</h3>
                     <p>BatchBill automatically creates a consolidated invoice in your bexio. Ready to be sent.</p>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SPLITBILL SECTION -->
+    <section class="splitbill-section">
+        <div class="splitbill-container">
+            <img src="Logo_Splitbill.png" alt="SplitBill Logo" class="splitbill-logo">
+            <h2>The Perfect Complement to BatchBill</h2>
+
+            <div class="splitbill-features">
+                <div class="splitbill-feature">
+                    <strong>BatchBill →</strong>
+                    <span>merges multiple orders into a single invoice</span>
+                </div>
+                <div class="splitbill-feature">
+                    <strong>SplitBill →</strong>
+                    <span>handles down payments and partial payments</span>
+                </div>
+            </div>
+
+            <div class="splitbill-conclusion">
+                Together, they address two major limitations of bexio, while seamlessly integrating into your existing
+                processes.
             </div>
         </div>
     </section>
