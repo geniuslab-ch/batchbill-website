@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmation - BatchBill</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-dark: #0F172A;
+            --accent-teal: #14B8A6;
+            --white: #FFFFFF;
+            --light-bg: #F8FAFC;
+            --gray-600: #475569;
+            --gray-300: #CBD5E1;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--primary-dark);
+            line-height: 1.6;
+            background: var(--light-bg);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .confirmation-container {
+            max-width: 600px;
+            margin: 2rem;
+            text-align: center;
+            padding: 3rem 2.5rem;
+            background: var(--white);
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+        }
+
+        .checkmark {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #14B8A6, #0D9488);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 2rem;
+            animation: scaleIn 0.5s ease-out;
+        }
+
+        .checkmark svg {
+            width: 40px;
+            height: 40px;
+            stroke: white;
+            stroke-width: 3;
+            fill: none;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+
+        @keyframes scaleIn {
+            0% {
+                transform: scale(0);
+                opacity: 0;
+            }
+
+            60% {
+                transform: scale(1.1);
+            }
+
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        .confirmation-container h1 {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--primary-dark);
+        }
+
+        .confirmation-container p {
+            font-size: 1.1rem;
+            color: var(--gray-600);
+            margin-bottom: 1.5rem;
+            line-height: 1.7;
+        }
+
+        .confirmation-container .subtitle {
+            font-size: 1rem;
+            color: var(--gray-600);
+            margin-bottom: 2.5rem;
+        }
+
+        .btn-access {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            background: linear-gradient(135deg, #14B8A6, #0D9488);
+            color: var(--white);
+            text-decoration: none;
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: 1.15rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 15px rgba(20, 184, 166, 0.3);
+        }
+
+        .btn-access:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(20, 184, 166, 0.4);
+        }
+
+        .steps {
+            margin-top: 2.5rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--gray-300);
+            text-align: left;
+        }
+
+        .steps h3 {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--primary-dark);
+        }
+
+        .step-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.8rem;
+            margin-bottom: 0.8rem;
+            font-size: 0.95rem;
+            color: var(--gray-600);
+        }
+
+        .step-item .step-num {
+            min-width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background: var(--accent-teal);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.75rem;
+            font-weight: 700;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 2rem;
+            color: var(--gray-600);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+
+        .back-link:hover {
+            color: var(--accent-teal);
+        }
+
+        .logo {
+            margin-bottom: 1.5rem;
+        }
+
+        .logo img {
+            height: 60px;
+        }
+
+        @media (max-width: 640px) {
+            .confirmation-container {
+                margin: 1rem;
+                padding: 2rem 1.5rem;
+            }
+
+            .confirmation-container h1 {
+                font-size: 1.6rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="confirmation-container">
+        <div class="logo">
+            <img src="Logo_Batchbill.png" alt="BatchBill Logo">
+        </div>
+
+        <div class="checkmark">
+            <svg viewBox="0 0 24 24">
+                <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+        </div>
+
+        <h1>Paiement confirmé !</h1>
+        <p>Merci pour votre abonnement à BatchBill. Votre compte est prêt à être utilisé.</p>
+        <p class="subtitle">Un email de confirmation a été envoyé à votre adresse.</p>
+
+        <a href="https://batch-bill.onrender.com" class="btn-access" target="_blank">
+            Accéder à BatchBill →
+        </a>
+
+        <div class="steps">
+            <h3>Prochaines étapes :</h3>
+            <div class="step-item">
+                <span class="step-num">1</span>
+                <span>Connectez-vous avec votre compte bexio</span>
+            </div>
+            <div class="step-item">
+                <span class="step-num">2</span>
+                <span>Autorisez BatchBill à accéder à vos commandes</span>
+            </div>
+            <div class="step-item">
+                <span class="step-num">3</span>
+                <span>Sélectionnez les commandes à fusionner et c'est parti !</span>
+            </div>
+        </div>
+
+        <a href="index.html" class="back-link">← Retour à l'accueil</a>
+    </div>
+</body>
+
+</html>
