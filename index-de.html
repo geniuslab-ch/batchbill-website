@@ -345,6 +345,106 @@
             opacity: 0.9;
         }
 
+        /* PRICING SECTION */
+        .pricing-section {
+            padding: 6rem 2rem;
+            background: var(--white);
+        }
+
+        .pricing-container {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .pricing-cards {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .pricing-card {
+            background: var(--light-bg);
+            border-radius: 16px;
+            padding: 2.5rem 2rem;
+            position: relative;
+            border: 2px solid var(--gray-300);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .pricing-card.popular {
+            border-color: var(--accent-teal);
+            background: linear-gradient(135deg, #F0FDFA, #CCFBF1);
+        }
+
+        .pricing-card .badge {
+            position: absolute;
+            top: -14px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--accent-teal);
+            color: var(--white);
+            padding: 0.3rem 1.2rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        .pricing-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: var(--primary-dark);
+        }
+
+        .pricing-card .price {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--primary-dark);
+            margin: 1rem 0;
+        }
+
+        .pricing-card .price span {
+            font-size: 1rem;
+            font-weight: 400;
+            color: var(--gray-600);
+        }
+
+        .pricing-card .features {
+            list-style: none;
+            padding: 0;
+            margin: 1.5rem 0 2rem;
+            text-align: left;
+        }
+
+        .pricing-card .features li {
+            padding: 0.5rem 0;
+            color: var(--gray-600);
+            font-size: 0.95rem;
+        }
+
+        .pricing-card .features li::before {
+            content: '✓ ';
+            color: var(--accent-teal);
+            font-weight: 700;
+        }
+
+        .pricing-card .btn {
+            width: 100%;
+            text-align: center;
+        }
+
+        @media (max-width: 640px) {
+            .pricing-cards {
+                grid-template-columns: 1fr;
+            }
+        }
+
         /* FOOTER */
         footer {
             background: var(--primary-dark);
@@ -533,7 +633,7 @@
                 <a href="index-de.html" class="active">DE</a>
                 <a href="index-it.html">IT</a>
             </div>
-            <a href="waiting-list-de.html" class="btn">Auf die Warteliste</a>
+            <a href="#pricing" class="btn">Abonnieren</a>
         </div>
     </header>
 
@@ -544,7 +644,7 @@
                 <h1>Führen Sie Ihre bexio-Bestellungen mit <span class="highlight">1 Klick zusammen</span></h1>
                 <p>Verlieren Sie keine Zeit mehr mit wiederkehrenden Rechnungen. BatchBill konsolidiert Ihre
                     Bestellungen automatisch in eine einzige, klare Rechnung.</p>
-                <a href="waiting-list-de.html" class="btn btn-large">Auf die Warteliste setzen →</a>
+                <a href="#pricing" class="btn btn-large">Jetzt starten →</a>
             </div>
             <div class="hero-image"
                 style="padding: 0; border: none; background: transparent; box-shadow: 0 20px 50px rgba(0,0,0,0.15);">
@@ -657,11 +757,46 @@
         </div>
     </section>
 
+    <!-- PRICING SECTION -->
+    <section class="pricing-section" id="pricing">
+        <div class="pricing-container">
+            <h2 class="section-title">Wählen Sie Ihr Abo</h2>
+            <p class="section-subtitle">Einfach, transparent, ohne Verpflichtung.</p>
+
+            <div class="pricing-cards">
+                <div class="pricing-card">
+                    <h3>Monatlich</h3>
+                    <div class="price">29 <span>CHF/Monat</span></div>
+                    <ul class="features">
+                        <li>Unbegrenzte Bestellungszusammenführung</li>
+                        <li>Vollständige Bexio-Integration</li>
+                        <li>Prioritäts-Support</li>
+                        <li>Jederzeit kündbar</li>
+                    </ul>
+                    <a href="https://buy.stripe.com/5kQfZadqU3Vu0gy0K91RC00" class="btn btn-large">Jetzt starten</a>
+                </div>
+                <div class="pricing-card popular">
+                    <span class="badge">Am beliebtesten</span>
+                    <h3>Jährlich</h3>
+                    <div class="price">290 <span>CHF/Jahr</span></div>
+                    <ul class="features">
+                        <li>Unbegrenzte Bestellungszusammenführung</li>
+                        <li>Vollständige Bexio-Integration</li>
+                        <li>Prioritäts-Support</li>
+                        <li>2 Monate gratis</li>
+                    </ul>
+                    <a href="https://buy.stripe.com/9B63co3Qk63C7J0boN1RC01" class="btn btn-large">Mit Jährlich
+                        sparen</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- CTA FINAL -->
     <section class="cta-final" id="cta">
         <h2>Hören Sie auf, Ihren Freitagnachmittag mit Rechnungen zu verschwenden.</h2>
-        <a href="waiting-list-de.html" class="btn btn-large">Auf die Warteliste setzen</a>
-        <p class="reassurance">✓ Prioritätszugang · ✓ Begrenzte Plätze · ✓ Bald verfügbar</p>
+        <a href="#pricing" class="btn btn-large">Jetzt starten</a>
+        <p class="reassurance">✓ Ohne Verpflichtung · ✓ Einrichtung in 5 Min · ✓ Support inklusive</p>
     </section>
 
     <!-- FOOTER -->
